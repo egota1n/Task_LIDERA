@@ -1,0 +1,239 @@
+@import url("./base.css");
+@import url('./font.css');
+
+:root {
+    --text-color1: #9d097c;
+    --text-color2: #32334c;
+    --white-color: #ffffff;
+    --hover-color: #cd1ba5;
+    --gradient-color: linear-gradient(259deg, #2D1178 25.04%, #DB2D8F 77.78%);
+}
+
+/* ABOUT */
+
+.section__about{
+    display: block;
+    padding: 144px 0 234px 0;
+}
+
+.about__title{
+    display: block;
+    width: 896px;
+    margin: 0 auto;
+    line-height: 150%;
+}
+
+.about__btn{
+    width: 240px;
+    height: 80px;
+    margin: 42px auto 0 auto;
+    border-radius: 32px;
+    border: 1px solid var(--text-color1);
+    color: var(--text-color1);
+}
+
+/* STUDY */
+
+.section__study{
+    display: block;
+    padding: 110px 0;
+}
+
+.study-title{
+    line-height: 118%;
+}
+
+.study-cards{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-top: 32px;
+}
+
+.study-cards__item{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 360px;
+    height: 270px;
+    padding: 32px;
+    border-radius: 24px;
+    background: var(--white-color);
+    box-shadow: 0px 12px 32px 0px rgba(0, 0, 0, 0.12);
+    transition: all 0.3s ease;
+}
+
+.study-cards__item:hover{
+    box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.12);
+}
+
+.study-cards__flex{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.study-cards__title{
+    line-height: 140%;
+}
+
+.study-cards__description{
+    color: var(--text-color2);
+    line-height: 142%;
+}
+
+.study-cards__btn{
+    color: var(--white-color);
+    border-radius: 16px;
+    width: 118px;
+    height: 43px;
+    background: var(--text-color1);
+}
+
+/* NEWS */
+
+.section__news{
+    display: block;
+    padding: 110px 0 159px 0;
+}
+
+.news-title{
+    line-height: 118%;
+}
+
+.news-cards{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+.news-cards__item{
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    width: 264px;
+    height: 286px;
+    padding: 16px;
+    border-radius: 24px;
+    background-size: cover!important;
+    background-position: center center!important;
+    background-repeat: no-repeat!important;
+    position: relative;
+    overflow: hidden;
+}
+
+.news-cards__item:nth-child(1){
+    background:url(./../img/jpg/news1.jpg);
+}
+
+.news-cards__item:nth-child(2){
+    background:url(./../img/jpg/news2.jpg);
+}
+
+.news-cards__item:nth-child(3){
+    background:url(./../img/jpg/news3.jpg);
+}
+
+.news-cards__item:nth-child(4){
+    background:url(./../img/jpg/news4.jpg);
+}
+
+.news-cards__item::before{
+    content: '';
+    display: block;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0, #000 100%);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 152px;
+}
+
+.news-cards__item::after{
+    content: '';
+    display: block;
+    background: #fa9397;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 274px);
+    bottom: -59px;
+    width: calc(100%*1.26);
+    height: 332.63px;
+    border-radius: 1000px;
+    transition: all 0.5s ease;
+}
+
+.news-cards__item:hover:after{
+    transform: translate(-50%, 0);
+}
+
+.news-cards__title{
+    z-index: 2;
+    line-height: 140%;
+    color: var(--white-color);
+}
+
+/* FOOTER */
+.footer{
+    background: #c6d9dd;
+    padding: 32px 0 63px 0;
+}
+
+.footer .container{
+    display: flex;
+    align-items: flex-start;
+    gap: 107px;
+}
+
+.footer__info{
+    display: flex;
+    flex-direction: column;
+    gap: 42px;
+}
+
+.footer__logo{
+    display: flex;
+    align-items: center;
+    gap: 27px;
+}
+
+.footer__network{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.footer__network svg{
+    display: block;
+    width: 20px;
+    height: 20px;
+    fill: var(--text-color1);
+    transition: all 0.2s ease;
+}
+
+.footer__network svg:hover{
+    fill: var(--hover-color);
+}
+
+.footer__menu{
+    display: flex;
+    align-items: flex-start;
+    gap: 39px;
+    margin-top: 11px;
+}
+
+.menu__group{
+    display: flex;
+    width: 180px;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.menu__link{
+    transition: all 0.2s ease;
+}
+
+.menu__link:hover{
+    color: var(--text-color1);
+}
